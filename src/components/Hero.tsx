@@ -56,21 +56,6 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                 >
-                    <motion.div
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        transition={{ duration: 0.5, type: "spring" }}
-                        className="mb-8 relative w-32 h-32 md:w-40 md:h-40 mx-auto"
-                    >
-                        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-blue-500 blur-lg opacity-50 animate-pulse" />
-                        <Image
-                            src="/profile-pic.png"
-                            alt="Kadiresh P"
-                            fill
-                            className="rounded-full object-cover border-4 border-white dark:border-black relative z-10"
-                            priority
-                        />
-                    </motion.div>
 
                     <h2 className="text-xl md:text-2xl font-mono text-purple-600 dark:text-purple-400 mb-4">
                         Hello, I'm
@@ -79,7 +64,7 @@ export default function Hero() {
                         Kadiresh P
                     </h1>
                     <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-2xl mx-auto mb-8">
-                        Full-Stack Developer | React & Next.js Enthusiast | Embedded Systems
+                        Full-Stack Developer | React & Next.js | Backend Developer | Mern Stack |
                     </p>
                 </motion.div>
 
@@ -140,6 +125,6 @@ export default function Hero() {
             >
                 <ArrowDown className="w-6 h-6 text-gray-500" />
             </motion.div>
-        </section>
+        </section >
     );
 }
