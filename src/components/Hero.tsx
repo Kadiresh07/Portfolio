@@ -83,7 +83,7 @@ export default function Hero() {
                         Contact Me
                     </Link>
                     <a
-                        href="/resume.pdf" // Placeholder for resume path
+                        href="/KADIRESH-P-CV.pdf" // Placeholder for resume path
                         download
                         className="px-8 py-3 border border-purple-500 text-purple-400 hover:bg-purple-500/10 rounded-full font-semibold transition-all transform hover:scale-105"
                     >
