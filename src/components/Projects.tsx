@@ -37,7 +37,7 @@ const projects = [
       "Designed clean, futuristic UI with smooth animations",
     ],
     image: "/elysyal (1).webp",
-    videoUrl: "/Recording 2026 ELYSYAL.mp4",
+    videoUrl: "https://res.cloudinary.com/doqflypau/video/upload/Recording_2026_ELYSYAL_tkzukg.mp4",
     githubUrl: "https://github.com/Kadiresh07",
     tech: ["Next.js", "Tailwind CSS", "AI Integration"],
     color: "#a855f7",
