@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import { Play, Lock } from "lucide-react";
@@ -18,7 +18,7 @@ const projects = [
       "Implemented clean and intuitive booking flow",
       "Deployed on Vercel with production-ready setup",
     ],
-    image: "/dr chaitra.png",
+    image: "/dr chaitra.webp",
     videoUrl: "/Recording dr chaithra.mp4",
     githubUrl: "https://github.com/Kadiresh07",
     tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
@@ -36,7 +36,7 @@ const projects = [
       "Built reusable UI components for faster development",
       "Designed clean, futuristic UI with smooth animations",
     ],
-    image: "/elysyal (1).png",
+    image: "/elysyal (1).webp",
     videoUrl: "/Recording 2026 ELYSYAL.mp4",
     githubUrl: "https://github.com/Kadiresh07",
     tech: ["Next.js", "Tailwind CSS", "AI Integration"],
@@ -53,7 +53,7 @@ const projects = [
       "Secure API handling with Node.js & Express",
       "Protected routes and validation",
     ],
-    image: "/rbms.png",
+    image: "/rbms.webp",
     videoUrl: "",
     githubUrl: "https://github.com/Kadiresh07",
     tech: ["Node.js", "Express", "JWT", "RBAC"],
@@ -71,7 +71,7 @@ const projects = [
       "Clean and structured UI for better usability",
       "Focused on performance and scalability",
     ],
-    image: "/project 3.png",
+    image: "/project 3.webp",
     videoUrl: "/Recording 2026-cove and compasss.mp4",
     githubUrl: "https://github.com/Kadiresh07",
     tech: ["React", "TypeScript", "Next.js"],
@@ -86,7 +86,7 @@ const projects = [
       "Integrated movie data using external APIs",
       "Built responsive UI similar to Netflix",
     ],
-    image: "/netflix clone.png",
+    image: "/netflix clone.webp",
     videoUrl: "",
     githubUrl: "https://github.com/Kadiresh07",
     tech: ["React", "Next.js", "API", "Tailwind CSS"],
@@ -197,7 +197,7 @@ export default function Projects() {
                       <ul className="space-y-1">
                         {project.highlights.map((highlight, idx) => (
                           <li key={idx} className="text-gray-400 text-xs sm:text-sm flex items-start">
-                            <span className="text-purple-400 mr-2 mt-0.5">•</span>
+                            <span className="text-purple-400 mr-2 mt-0.5">â€¢</span>
                             {highlight}
                           </li>
                         ))}

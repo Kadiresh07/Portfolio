@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -14,7 +14,7 @@ export default function Logo() {
                 className="relative w-10 h-10 drop-shadow-[0_0_8px_rgba(147,51,234,0.8)]"
             >
                 <Image
-                    src="/k-logo.png"
+                    src="/k-logo.webp"
                     alt="Kadiresh Logo"
                     fill
                     className="object-contain"

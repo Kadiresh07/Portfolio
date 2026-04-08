@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 
@@ -74,7 +74,7 @@ export default function Hero() {
                             >
                                 <div className="w-full h-full rounded-full bg-purple-900/40 p-1.5 overflow-hidden">
                                     <Image
-                                        src="/kd.png"
+                                        src="/kd.webp"
                                         alt="Kadiresh P"
                                         width={224}
                                         height={224}

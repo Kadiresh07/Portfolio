@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   title: "Kadiresh P | Full-Stack Developer",
   description: "Portfolio of Kadiresh P, a Full-Stack Developer specializing in React, Next.js, and Node.js.",
   icons: {
-    icon: "/k-logo.png",
-    shortcut: "/k-logo.png",
-    apple: "/k-logo.png",
+    icon: "/k-logo.webp",
+    shortcut: "/k-logo.webp",
+    apple: "/k-logo.webp",
   },
 };
 
