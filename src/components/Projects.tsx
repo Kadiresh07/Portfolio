@@ -19,7 +19,7 @@ const projects = [
       "Deployed on Vercel with production-ready setup",
     ],
     image: "/dr chaitra.webp",
-    videoUrl: "/Recording dr chaithra.mp4",
+    videoUrl: "https://res.cloudinary.com/doqflypau/video/upload/Recording_dr_chaithra_celsfh.mp4",
     githubUrl: "https://github.com/Kadiresh07",
     tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
     color: "#ec4899",
