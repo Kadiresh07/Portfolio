@@ -72,7 +72,7 @@ const projects = [
       "Focused on performance and scalability",
     ],
     image: "/project 3.webp",
-    videoUrl: "/Recording 2026-cove and compasss.mp4",
+    videoUrl: "https://res.cloudinary.com/doqflypau/video/upload/Recording_2026-cove_and_compasss_my0ld6.mp4",
     githubUrl: "https://github.com/Kadiresh07",
     tech: ["React", "TypeScript", "Next.js"],
     color: "#3b82f6",
