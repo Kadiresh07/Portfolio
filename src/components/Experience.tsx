@@ -6,24 +6,30 @@ import { Briefcase, Calendar } from "lucide-react";
 const experiences = [
     {
         company: "Radical Now Lab",
-        role: "Full-Stack Developer Intern",
-        period: "August 2025 – November 2025",
+        role: "Software Engineer Intern",
+        period: "Aug 2025 – Mar 2026",
         description: [
-            "Working on a Role-Based User Management System with authentication, authorization, and secure access control.",
-            "Building front-end interfaces using React, Redux, and Next.js with reusable and scalable component structures.",
-            "Developing backend services and REST APIs using Node.js and Express.",
-            "Designing and managing data models using MongoDB and SQL for user, role, and permission mapping.",
-            "Implementing JWT-based authentication, session handling, and protected route logic.",
+            "Engineered responsive frontend applications using React.js and Next.js, improving page load performance by ~20%",
+            "Designed reusable and scalable UI components, reducing development time by ~15%",
+            "Developed and integrated REST APIs using Node.js and Express.js",
+            "Built a Role-Based User Management System with secure authentication and authorization",
+            "Implemented JWT-based authentication and RBAC for multi-role access control",
+            "Designed and managed databases using MongoDB and SQL",
+            "Strengthened security using protected routes, validation, and session handling",
+            "Optimized UI and API performance, improving response time and user experience",
+            "Collaborated in Agile sprints using Git for efficient feature delivery",
         ],
     },
     {
         company: "eTech Prowess",
         role: "Web Technologies Intern",
-        period: "Previous Internship",
+        period: "Feb 2025 – May 2025",
         description: [
-            "Acquired foundational knowledge of HTML, CSS, JavaScript, and SQL for front-end and database development.",
-            "Gained hands-on experience in web development using VS Code and modern development tools.",
-            "Developed interactive web pages and dynamic UI components.",
+            "Built responsive web pages using HTML, CSS, and JavaScript",
+            "Developed interactive UI components using ES6+ features",
+            "Debugged and resolved UI issues, improving application stability",
+            "Gained hands-on experience with modern development tools (VS Code, Git)",
+            "Completed multiple mini-projects to strengthen real-world development skills",
         ],
     },
 ];
@@ -38,7 +44,7 @@ export default function Experience() {
                     transition={{ duration: 0.5 }}
                     className="text-3xl md:text-4xl font-bold mb-12 text-center text-purple-600 dark:text-purple-400"
                 >
-                    Experience
+                    Work Experience
                 </motion.h2>
 
                 <div className="space-y-12">
@@ -65,13 +71,16 @@ export default function Experience() {
 
                             <h4 className="text-xl text-purple-500 dark:text-purple-300 mb-4">{exp.role}</h4>
 
-                            <ul className="list-disc list-inside space-y-2 text-zinc-700 dark:text-gray-300">
-                                {exp.description.map((item, i) => (
-                                    <li key={i} className="leading-relaxed">
-                                        {item}
-                                    </li>
-                                ))}
-                            </ul>
+                            <div className="relative rounded-2xl p-5 bg-white/5 border border-purple-500/20 backdrop-blur-md">
+                                <ul className="space-y-2 text-zinc-300 dark:text-gray-300">
+                                    {exp.description.map((item, i) => (
+                                        <li key={i} className="leading-relaxed text-sm flex items-start gap-2">
+                                            <span className="text-purple-400 mt-1 shrink-0">▹</span>
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </motion.div>
                     ))}
                 </div>

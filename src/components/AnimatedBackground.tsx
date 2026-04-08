@@ -1,44 +1,72 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef } from "react";
+import { useTheme } from "next-themes";
 
 export default function AnimatedBackground() {
-    const [mounted, setMounted] = useState(false);
+    const canvasRef = useRef<HTMLCanvasElement>(null);
+    const { theme } = useTheme();
 
     useEffect(() => {
-        setMounted(true);
-    }, []);
+        const canvas = canvasRef.current;
+        if (!canvas) return;
 
-    if (!mounted) return null;
+        const ctx = canvas.getContext("2d");
+        if (!ctx) return;
+
+        const resizeCanvas = () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        };
+
+        resizeCanvas();
+
+        const binaryChars = "01";
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+
+        const drops: number[] = [];
+        for (let x = 0; x < columns; x++) {
+            drops[x] = 1;
+        }
+
+        let intervalId: NodeJS.Timeout;
+
+        const draw = () => {
+            ctx.fillStyle = theme === 'dark' ? "rgba(0, 0, 0, 0.05)" : "rgba(255, 255, 255, 0.05)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = theme === 'dark' ? "#9333ea" : "#7e22ce"; // Purple color for binary text
+            ctx.font = fontSize + "px monospace";
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = binaryChars.charAt(Math.floor(Math.random() * binaryChars.length));
+
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
+
+                drops[i]++;
+            }
+        };
+
+        intervalId = setInterval(draw, 120); // Extensively slowed down falling animation
+
+        window.addEventListener("resize", resizeCanvas);
+
+        return () => {
+            window.removeEventListener("resize", resizeCanvas);
+            clearInterval(intervalId);
+        };
+    }, [theme]);
 
     return (
-        <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
-            {[...Array(20)].map((_, i) => (
-                <motion.div
-                    key={i}
-                    className="absolute bg-purple-500/10 dark:bg-purple-500/20 rounded-full blur-xl"
-                    initial={{
-                        x: Math.random() * (typeof window !== "undefined" ? window.innerWidth : 1000),
-                        y: Math.random() * (typeof window !== "undefined" ? window.innerHeight : 1000),
-                        scale: Math.random() * 0.5 + 0.5,
-                    }}
-                    animate={{
-                        x: Math.random() * (typeof window !== "undefined" ? window.innerWidth : 1000),
-                        y: Math.random() * (typeof window !== "undefined" ? window.innerHeight : 1000),
-                    }}
-                    transition={{
-                        duration: Math.random() * 20 + 10,
-                        repeat: Infinity,
-                        repeatType: "reverse",
-                        ease: "easeInOut",
-                    }}
-                    style={{
-                        width: `${Math.random() * 300 + 50}px`,
-                        height: `${Math.random() * 300 + 50}px`,
-                    }}
-                />
-            ))}
-        </div>
+        <canvas
+            ref={canvasRef}
+            className="fixed inset-0 z-[-1] pointer-events-none"
+            style={{ opacity: 0.6 }}
+        />
     );
 }

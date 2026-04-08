@@ -18,6 +18,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Kadiresh P | Full-Stack Developer",
   description: "Portfolio of Kadiresh P, a Full-Stack Developer specializing in React, Next.js, and Node.js.",
+  icons: {
+    icon: "/k-logo.png",
+    shortcut: "/k-logo.png",
+    apple: "/k-logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -28,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-black text-black dark:text-white transition-colors duration-300`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased text-black dark:text-white transition-colors duration-300`}
       >
         <ThemeProvider
           attribute="class"
