@@ -314,12 +314,12 @@ export default function Skills() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="relative z-10 w-full flex items-center justify-center gap-4 px-4"
+        className="relative z-10 w-full flex items-center justify-center gap-4 px-4 overflow-x-auto"
       >
         {/* ── Laptop center ── */}
         <motion.div
           className="relative z-10 flex-shrink-0"
-          style={{ width: "100%", maxWidth: "1250px" }}
+          style={{ width: "1000px", maxWidth: "1000px", minWidth: "1000px" }}
           animate={{ y: [0, -6, 0] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
         >
