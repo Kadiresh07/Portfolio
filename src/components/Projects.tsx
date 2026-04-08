@@ -19,7 +19,7 @@ const projects = [
       "Deployed on Vercel with production-ready setup",
     ],
     image: "/dr chaitra.webp",
-    videoUrl: "https://res.cloudinary.com/doqflypau/video/upload/Recording_dr_chaithra_celsfh.mp4",
+    videoUrl: "https://player.cloudinary.com/embed/?cloud_name=doqflypau&public_id=Recording_dr_chaithra_celsfh",
     githubUrl: "https://github.com/Kadiresh07",
     tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
     color: "#ec4899",
@@ -37,7 +37,7 @@ const projects = [
       "Designed clean, futuristic UI with smooth animations",
     ],
     image: "/elysyal (1).webp",
-    videoUrl: "https://res.cloudinary.com/doqflypau/video/upload/Recording_2026_ELYSYAL_tkzukg.mp4",
+    videoUrl: "https://player.cloudinary.com/embed/?cloud_name=doqflypau&public_id=Recording_2026_ELYSYAL_tkzukg",
     githubUrl: "https://github.com/Kadiresh07",
     tech: ["Next.js", "Tailwind CSS", "AI Integration"],
     color: "#a855f7",
@@ -72,7 +72,7 @@ const projects = [
       "Focused on performance and scalability",
     ],
     image: "/project 3.webp",
-    videoUrl: "https://res.cloudinary.com/doqflypau/video/upload/Recording_2026-cove_and_compasss_my0ld6.mp4",
+    videoUrl: "https://player.cloudinary.com/embed/?cloud_name=doqflypau&public_id=Recording_2026-cove_and_compasss_my0ld6",
     githubUrl: "https://github.com/Kadiresh07",
     tech: ["React", "TypeScript", "Next.js"],
     color: "#3b82f6",
@@ -122,15 +122,20 @@ export default function Projects() {
             className="relative w-full max-w-4xl aspect-video bg-black rounded-xl sm:rounded-2xl overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            <video
-              width="100%"
-              height="100%"
-              controls
-              autoPlay
-              className="w-full h-full"
-            >
-              <source src={activeProject.videoUrl} type="video/mp4" />
-            </video>
+            {activeProject.videoUrl.includes('cloudinary.com') ? (
+              <iframe
+                src={activeProject.videoUrl}
+                width="100%"
+                height="100%"
+                allow="autoplay; fullscreen"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            ) : (
+              <video width="100%" height="100%" controls autoPlay className="w-full h-full">
+                <source src={activeProject.videoUrl} type="video/mp4" />
+              </video>
+            )}
             <button
               onClick={() => setSelectedVideo(null)}
               className="absolute top-3 right-3 p-1.5 rounded-full bg-black/60 text-white hover:text-gray-300 transition-colors"
