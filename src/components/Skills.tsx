@@ -69,7 +69,7 @@ function LaptopSVG({
   onTabClick: (i: number) => void;
 }) {
   return (
-    <svg viewBox="0 0 700 480" className="w-full" style={{ maxWidth: "100%" }}>
+    <svg viewBox="0 0 700 480" width="1000" height="686" style={{ display: "block" }}>
       <defs>
         <linearGradient id="lid-grad" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#2d1b4e" />
