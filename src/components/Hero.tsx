@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 
@@ -130,7 +130,7 @@ export default function Hero() {
                             Contact Me
                         </Link>
                         <a
-                            href="/KADIRESH-P-CV.pdf"
+                            href="/kadiresh_cv1.pdf"
                             download
                             className="px-8 py-3 border-2 border-purple-500 text-purple-600 dark:text-purple-400 hover:bg-purple-500/10 rounded-full font-semibold transition-all transform hover:scale-105 flex justify-center items-center"
                         >
