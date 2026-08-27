@@ -8,6 +8,24 @@ import { useState } from "react";
 const projects = [
   {
     id: 1,
+    title: "Ovum Birth Story",
+    subtitle: "Hospital Birth Story Management System",
+    description: "A hospital management application that helps staff create, verify, approve, and publish personalized birth-story keepsakes for newborns. The workflow includes role-based access, baby profile data, photo uploads, approval steps, and PDF generation for printing or digital keepsakes.",
+    highlights: [
+      "Role-based access for admin, staff, and approver users",
+      "Birth story creation with baby, family, and clinical details",
+      "Photo upload and verification workflow before approval",
+      "Dashboard for approvals, search, filtering, and reporting",
+      "PDF keepsake generation designed for A4 print output",
+    ],
+    image: "/projects/ovum.png",
+    videoUrl: "",
+    githubUrl: "https://github.com/Kadiresh07",
+    tech: ["Next.js", "Supabase", "PostgreSQL", "PDF", "Tailwind CSS"],
+    color: "#22c55e",
+  },
+  {
+    id: 2,
     title: "Dr. Chaitra S K",
     subtitle: "Doctor Appointment Platform",
     description: "A full-stack healthcare web application designed to simplify doctor appointment booking and patient management. The platform provides a seamless experience for users to schedule consultations, view services, and access medical information across devices.",
@@ -25,7 +43,7 @@ const projects = [
     color: "#ec4899",
   },
   {
-    id: 2,
+    id: 3,
     title: "Elysyal",
     subtitle: "AI-Powered Digital Experience Builder",
     description: "A modern service-based platform designed to help businesses build smarter digital experiences using AI-driven tools. Focused on performance, scalability, and SEO optimization for better visibility and faster user interaction.",
@@ -60,7 +78,7 @@ const projects = [
     color: "#06b6d4",
   },
   {
-    id: 3,
+    id: 5,
     title: "Cove And Compass",
     subtitle: "Travel Planning Platform",
     description: "A travel companion web application that helps users discover destinations and plan their journeys efficiently. It offers interactive exploration features and a smooth user experience across all devices.",
@@ -78,7 +96,7 @@ const projects = [
     color: "#3b82f6",
   },
   {
-    id: 5,
+    id: 6,
     title: "Netflix Clone",
     subtitle: "Streaming UI with Real-Time API Data",
     description: "A responsive Netflix-inspired web application that allows users to browse movies and TV shows using real-time API data. Designed with a focus on performance, UI accuracy, and smooth user experience.",
@@ -92,7 +110,6 @@ const projects = [
     tech: ["React", "Next.js", "API", "Tailwind CSS"],
     color: "#e50914",
   },
- 
 ];
 
 export default function Projects() {
